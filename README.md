@@ -1,4 +1,3 @@
-Land Use/Land Cover Change Analysis Tool
 A web-based application for analyzing vegetation changes in urban and suburban contexts between 2018 and 2024 using the Normalized Difference Vegetation Index (NDVI) and open-source satellite imagery.
 
 Overview
@@ -6,50 +5,39 @@ This tool provides an accessible method for researchers, planners, and community
 
 Online Tool: [terrestrialresearch.com/machinelearning/landclass2](https://terrestrialresearch.com/machinelearning/landclass2)
 
-Features
+System includes
 - Interactive map interface for selecting analysis areas
 - Automated NDVI calculation and land classification
 - Temporal comparison (2018 vs 2024)
 - Statistical analysis (correlation and regression)
 - Visual data presentation with charts and maps
 - Five-category land cover classification system
-- Export capabilities for results
 
 System Architecture
-
 Frontend
 - HTML5/CSS3 - User interface structure and styling
 - JavaScript ES6 - Application logic and interactivity
 - Leaflet.js - Interactive mapping framework
-- Chart.js - Statistical visualization
 
 Backend
-- Python 3.11+- Core processing engine
-  - Pillow (PIL)- Image manipulation
-  - NumPy 1.24+- Array operations and numerical computing
-  - SciPy 1.10+- Statistical analysis (Pearson's r, regression)
-  - Matplotlib 3.7+- Data visualization generation
-  - Requests- ESA API communication
-- PHP 8.1+- Server-side request handling
-
+- Python 3.11+
+  - Pillow (PIL)
+  - NumPy 1.24+
+  - SciPy 1.10+
+  - Matplotlib 3.7+
+  - Requests-
+- PHP 8.1+
+  
 Data Sources
 - ESA Sentinel-2- Multispectral satellite imagery (10m resolution)
 - Copernicus Data Space- Satellite data access portal
 
-Installation
+Installation 
 Prerequisites
 - Web server (Apache/Nginx)
 - PHP 8.1+
 - Python 3.11+
 - ESA Copernicus account (free registration)
-
-Setup
-1. Clone the repository
-2. Install Python dependencies
-3. Configure ESA API access
-4. Set up web server
-5. Configure cache directories
-
 
 Methodology
 NDVI Calculation
