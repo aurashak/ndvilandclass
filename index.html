@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vegetation Change Analysis</title>
+<meta name="description" content="NDVI-based vegetation change analysis tool for comparing land cover between 2018 and 2024">
+<meta name="keywords" content="NDVI, vegetation analysis, land cover change, remote sensing">
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<link rel="stylesheet" href="landclass2.css">
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+<div class="portfolio-wrapper">
+<div id="mainContainer">
+   
+    <div class="analysis-box">
+        <h2 style="margin-bottom: 5px;">Vegetation Analysis Tool</h2>
+        
+        <div class="location-search-container">
+            <div class="search-wrapper">
+                <input
+                    type="text"
+                    id="locationSearch"
+                    placeholder="Search for cities, neighborhoods, parks..."
+                    autocomplete="off"
+                />
+                <button id="classifyBtn">Analyze View</button>
+                <div id="searchResults" class="search-results"></div>
+            </div>
+            <p class="search-note">
+                This process uses the Normalized Difference Vegetation Index (NDVI) to classify land and determine changes in vegetation between 2018 and 2024. The parameters are optimized for urban and suburban areas.
+            </p>
+        </div>
+        
+        <div class="maps-container">
+            <div class="map-wrapper">
+                <h3>2018 Imagery</h3>
+                <div id="map2018" class="map"></div>
+            </div>
+            <div class="map-wrapper">
+                <h3>2024 Imagery</h3>
+                <div id="map2024" class="map"></div>
+            </div>
+        </div>
+    </div>
+   
+    <div id="loadingIndicator" class="loading-container">
+        <div class="loading-header">Processing Analysis</div>
+        <div class="loading-bar">
+            <span class="loading-percentage">0%</span>
+            <div class="loading-progress"></div>
+        </div>
+    </div>
+   
+    <div id="resultsPanel" style="display: none;">
+    </div>
+   
+</div>
+</div>
+<script src="landclass2.js"></script>
+</body>
+</html>
