@@ -64,13 +64,6 @@ Linear Regression:
 slope, intercept, r_value, p_value, std_err = stats.linregress(urban_gain, ndvi_change)
 
 
-Limitations
-Current Constraints
-- Resolution: 10m per pixel (Sentinel-2 MSI)
-- Temporal range: 2018-2024 (consistent public data availability)
-- Cloud cover: May require multiple image acquisitions
-- Geographic scope: Optimized for urban/suburban contexts (excludes rainforest, deep water, ice)
-- Accuracy: Lower than commercial VHR imagery (30cm resolution)
 
 
 
